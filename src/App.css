@@ -1,0 +1,271 @@
+.app-main {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  
+  /* CAMBIO 1: Asegura que el padding no estire el ancho total */
+  box-sizing: border-box; 
+  
+  /* CAMBIO 2: Reducimos un poco el padding superior para móviles */
+  /* El 20px de los lados es el "aire" que pedías */
+  padding: 20px 20px; 
+  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+  /* CAMBIO 3: Evita que el contenido empuje el borde */
+  overflow-x: hidden; 
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  text-align: center;
+  text-shadow: 4px 4px 0px var(--secondary);
+  -webkit-text-stroke: 2px var(--border);
+  margin-bottom: 50px;
+}
+
+.menu-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.menu-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.menu-stack .btn-punchy {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.loading-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+/* Contenedor principal del nuevo modo */
+.challenge-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Arreglo para el texto en español */
+.spanish-hint {
+  color: #5863f8;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  text-align: left; /* Para que no "brinque" */
+}
+
+.english-question {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  color: #1f2937;
+}
+
+.blank-space {
+  border-bottom: 3px solid #1f2937;
+  padding: 0 10px;
+  margin: 0 5px;
+  min-width: 100px;
+  display: inline-block;
+  text-align: center;
+}
+
+.filled {
+  color: #5863f8;
+  text-decoration: underline;
+}
+
+/* Layout de los botones */
+.options-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-btn {
+  width: 100%;
+  font-size: 1.2rem !important;
+  padding: 15px !important;
+}
+
+/* Header superior */
+.game-header-new {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.btn-exit-top {
+  background: #ffb800;
+  border: 3px solid #1a202c;
+  box-shadow: 4px 4px 0px #1a202c;
+  font-weight: 900;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.stats-container-top {
+  display: flex;
+  gap: 15px;
+}
+
+.stat-box-life, .stat-box-score {
+  background: #ff2e63; /* Rojo para vidas */
+  border: 3px solid #1a202c;
+  box-shadow: 4px 4px 0px #1a202c;
+  color: white;
+  padding: 5px 15px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-box-score {
+  background: #252a6a; /* Azul para puntos */
+}
+
+/* Tarjeta de pregunta */
+.card-question-main {
+  background: white;
+  border: 4px solid #1a202c;
+  box-shadow: 8px 8px 0px #1a202c;
+  padding: 40px 20px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.spanish-text-header {
+  color: #252a6a;
+  font-weight: 900;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.drop-zone-challenge {
+  border: 3px dashed #1a202c;
+  border-radius: 4px; /* Un toque leve de redondeado como en tu foto */
+  padding: 30px 60px 30px 20px; /* Espacio extra a la derecha para el botón ? */
+  position: relative;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8fafc; /* Un gris muy claro de fondo */
+}
+
+.sentence-container {
+  text-align: center;
+  width: 100%;
+}
+
+.english-sentence {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: #252a6a;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Estilo de la línea donde va la palabra */
+.blank-line {
+  display: inline-flex;
+  border-bottom: 4px solid #1a202c;
+  margin: 0 8px;
+  min-width: 100px;
+  justify-content: center;
+  vertical-align: baseline;
+}
+
+.selected-word-display {
+  color: #ffb800; /* Amarillo como en tu imagen */
+  text-transform: lowercase; /* Opcional, según prefieras */
+  position: relative;
+  top: -2px;
+}
+
+.dots-placeholder {
+  color: transparent; /* Oculta los puntos pero mantiene el ancho */
+  user-select: none;
+}
+
+/* Botón ? ajustado a la derecha */
+.help-btn-inline {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffb800;
+  border: 3px solid #1a202c;
+  box-shadow: 4px 4px 0px #1a202c;
+  width: 45px;
+  height: 65px;
+  font-weight: 900;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.help-btn-inline:active {
+  transform: translateY(-50%) translate(2px, 2px);
+  box-shadow: 0px 0px 0px #1a202c;
+}
+
+/* Animación cuando aparece la palabra */
+.animate-pop {
+  animation: popIn 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.help-btn-inline {
+  position: absolute;
+  right: 15px;
+  background: #ffb800;
+  border: 3px solid #1a202c;
+  width: 40px;
+  height: 60px;
+  font-weight: 900;
+  box-shadow: 3px 3px 0px #1a202c;
+}
+
+/* Espacio en blanco para la palabra */
+.blank-line {
+  border-bottom: 3px solid #1a202c;
+  margin: 0 10px;
+  min-width: 80px;
+  display: inline-block;
+  text-align: center;
+}
+
+.selected-word {
+  color: #ffb800;
+  font-weight: 900;
+}

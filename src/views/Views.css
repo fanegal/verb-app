@@ -1,0 +1,195 @@
+.view-fade-in {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px; /* Margen de seguridad para que no toque los bordes del cel */
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* ¡Clave! Evita el desborde horizontal */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cabecera de cada juego */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Cartas de Verbos */
+.verb-card {
+  background: var(--white);
+  padding: 20px;
+  border: 4px solid var(--border);
+  box-shadow: 6px 6px 0px var(--border);
+  margin-bottom: 20px;
+}
+
+/* Busca la clase que envuelve cada fila de verbo */
+.verb-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* El texto en español necesita un ancho mínimo para no cortarse */
+.spanish-text {
+  min-width: 80px; 
+  font-size: 0.9rem;
+  white-space: nowrap; /* Evita que el texto salte de línea */
+}
+
+/* El contenedor del input debe ser flexible */
+.verb-row > div {
+  flex: 1; /* Esto hace que el input use el espacio que sobre */
+  display: flex;
+  gap: 5px;
+}
+
+.game-input {
+  width: 100%; /* Ahora el input se encoge si la pantalla es chica */
+  min-width: 0; /* Permite que flexbox lo encoja */
+}
+
+.spanish-text {
+  font-size: 1.1rem;
+  font-weight: 900;
+  width: 40%;
+}
+
+.game-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: 3px solid var(--border);
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.verb-card.correct {
+  border-color: var(--success);
+  background: #e8f5e9;
+  animation: bounce 0.5s ease;
+}
+
+.verb-card.wrong {
+  border-color: var(--danger);
+  background: #ffebee;
+  animation: shake 0.4s ease;
+}
+
+/* Modo Frases (Tiles) */
+.dropzone {
+  min-height: 100px;
+  border: 4px dashed var(--border);
+  padding: 15px;
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: #fdfdfd;
+}
+
+.tiles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.btn-tile {
+  padding: 8px 16px;
+  background: var(--white);
+  border: 3px solid var(--border);
+  box-shadow: 4px 4px 0px var(--border);
+  cursor: pointer;
+  font-weight: 900;
+  font-family: inherit;
+}
+
+.btn-tile:hover {
+  background: var(--secondary);
+}
+
+/* Tabla de Récords */
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid var(--border);
+  margin-top: 10px;
+}
+
+.score-table th, .score-table td {
+  padding: 12px;
+  border: 2px solid var(--border);
+  text-align: left;
+}
+
+.score-table th {
+  background-color: var(--dark);
+  color: white;
+}
+
+.score-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.wrong-text { color: var(--danger); font-size: 0.85rem; margin-top: 10px; font-weight: 900; }
+.w-full { width: 100%; }
+
+/* Contenedor de badges en el header */
+.header-stats {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* El nuevo estilo para los contadores */
+.stat-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  font-size: 1.2rem;
+  font-weight: 900;
+  border: 3px solid var(--border);
+  box-shadow: 4px 4px 0px var(--border);
+  color: var(--white);
+  min-width: 60px;
+  justify-content: center;
+}
+
+/* Colores específicos para que resalten */
+.badge-lives {
+  background: var(--danger); /* Rojo vibrante */
+}
+
+.badge-score {
+  background: var(--dark); /* Azul profundo */
+}
+
+/* Iconos un poco más grandes */
+.stat-icon {
+  font-size: 1.4rem;
+  filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.2));
+}
+
+.tiles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 10px;
+  background: rgba(0,0,0,0.03); /* Un fondo ligero para delimitar el área */
+  border-radius: 8px;
+}

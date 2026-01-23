@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SpeakUp English</string> 
+    <string name="title_activity_main">com.paco.verbflow</string>
+    <string name="package_name">com.fanegal.verbflow</string>
+    <string name="custom_url_scheme">com.fanegal.verbflow</string>
+</resources>

@@ -1,0 +1,40 @@
+:root {
+  --bg-color: #f0f2f5;
+  --primary: #2962ff;   /* Azul fuerte */
+  --secondary: #ffab00; /* Naranja eléctrico */
+  --success: #00e676;   /* Verde neón */
+  --danger: #ff1744;    /* Rojo vibrante */
+  --dark: #1a237e;      /* Azul muy oscuro */
+  --border: #2c3e50;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial Black', Gadget, sans-serif;
+  color: var(--dark);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* Animaciones Reutilizables */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.view-fade-in { animation: popIn 0.3s ease-out; }
