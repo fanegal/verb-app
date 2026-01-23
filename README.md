@@ -1,73 +1,25 @@
-# React + TypeScript + Vite
+# 🚀 SpeakUp English
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**SpeakUp English** es una aplicación interactiva diseñada para dominar verbos y frases en inglés mediante mecánicas de juego. Construida con un enfoque "mobile-first", permite practicar gramática de forma dinámica y visual.
 
-Currently, two official plugins are available:
+## ✨ Características
+- **Práctica de Verbos:** Escribe la traducción correcta de verbos esenciales.
+- **Construcción de Frases:** Ordena palabras para formar oraciones coherentes.
+- **Sistema de Vidas y Puntos:** Mecánica de juego tipo "arcade" para incentivar el aprendizaje.
+- **Multiplataforma:** Disponible para Web y Android (gracias a Capacitor).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tecnologías Usadas
+- **React + Vite** (Frontend)
+- **TypeScript** (Tipado seguro)
+- **Capacitor** (Puente nativo para Android)
+- **CSS3** (Diseño responsivo y animaciones "Punchy")
 
-## React Compiler
+## 📱 Instalación en Android
+1. Clona el repositorio.
+2. Ejecuta `npm install`.
+3. Genera el build: `npm run build`.
+4. Sincroniza con Android Studio: `npx cap sync`.
+5. Abre en Android Studio y dale a **Run**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+Desarrollado con mucha cafeína por Francisco Arteaga
