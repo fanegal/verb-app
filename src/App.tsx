@@ -68,6 +68,15 @@ useEffect(() => {
               VIEW RECORDS
             </PunchyButton>
           </div>
+          <footer className="app-footer">
+  <p>Desarrollada por Francisco Emmanuel Arteaga Ayala</p>
+  <p>
+    Impulsado por{' '}
+    <a href="https://ar-sa.com.mx" target="_blank" rel="noopener noreferrer">
+      Ar-sa
+    </a>
+  </p>
+</footer>
         </div>
       )}
 
