@@ -8,7 +8,7 @@ export const dbService = {
     // 1. Inicializar el motor SQL
     init: async () => {
         const SQL = await initSqlJs({
-            locateFile: (file) => `https://sql.js.org/dist/${file}`,
+           locateFile: (file) => `/${file}` ,
         });
         db = new SQL.Database();
         console.log("SQL Engine Ready");
